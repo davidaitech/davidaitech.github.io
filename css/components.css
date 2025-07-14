@@ -415,7 +415,7 @@
 
 .experience-timeline {
   position: relative;
-  padding-left: var(--spacing-xl);
+  padding-left: var(--spacing-3xl);
 }
 
 .experience-timeline::before {
@@ -435,7 +435,7 @@
 
 .timeline-marker {
   position: absolute;
-  left: -12px;
+  left: -8px;
   top: 4px;
   width: 16px;
   height: 16px;
