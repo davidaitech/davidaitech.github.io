@@ -415,7 +415,7 @@
 
 .experience-timeline {
   position: relative;
-  padding-left: var(--spacing-3xl);
+  padding-left: 5rem;
 }
 
 .experience-timeline::before {
