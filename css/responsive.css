@@ -276,7 +276,7 @@
   }
   
   .experience-timeline {
-    padding-left: var(--spacing-lg);
+    padding-left: var(--spacing-2xl);
   }
   
   .timeline-content h4 {
@@ -466,7 +466,7 @@
   }
   
   .timeline-marker {
-    left: -8px;
+    left: -6px;
     width: 12px;
     height: 12px;
   }
