@@ -1,0 +1,223 @@
+/* ===== CSS VARIABLES ===== */
+:root {
+  /* === Colors === */
+  --primary-color: #00ff88;
+  --primary-light: #33ff99;
+  --primary-dark: #00cc6a;
+  
+  --secondary-color: #0066ff;
+  --secondary-light: #3385ff;
+  --secondary-dark: #0052cc;
+  
+  --accent-color: #ff0066;
+  --accent-light: #ff3385;
+  --accent-dark: #cc0052;
+  
+  /* === Background Colors === */
+  --bg-primary: #0a0a0a;
+  --bg-secondary: #1a1a1a;
+  --bg-tertiary: #2a2a2a;
+  --bg-card: #1e1e1e;
+  --bg-overlay: rgba(10, 10, 10, 0.95);
+  
+  /* === Text Colors === */
+  --text-primary: #ffffff;
+  --text-secondary: #cccccc;
+  --text-tertiary: #999999;
+  --text-muted: #666666;
+  --text-accent: #888888;
+  
+  /* === Border Colors === */
+  --border-primary: #333333;
+  --border-secondary: #444444;
+  --border-light: #555555;
+  --border-accent: var(--primary-color);
+  
+  /* === Gradients === */
+  --gradient-primary: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  --gradient-secondary: linear-gradient(135deg, var(--accent-color), var(--primary-color));
+  --gradient-tertiary: linear-gradient(135deg, var(--secondary-color), var(--accent-color));
+  --gradient-dark: linear-gradient(135deg, var(--bg-secondary), var(--bg-tertiary));
+  --gradient-overlay: linear-gradient(135deg, rgba(0, 255, 136, 0.1), rgba(0, 102, 255, 0.1));
+  
+  /* === Shadows === */
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.15);
+  --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.2);
+  --shadow-xl: 0 20px 40px rgba(0, 0, 0, 0.3);
+  --shadow-glow: 0 0 20px rgba(0, 255, 136, 0.3);
+  --shadow-accent: 0 10px 30px rgba(0, 255, 136, 0.2);
+  
+  /* === Typography === */
+  --font-family-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-family-heading: 'Poppins', var(--font-family-primary);
+  --font-family-mono: 'JetBrains Mono', 'Fira Code', monospace;
+  
+  --font-size-xs: 0.75rem;    /* 12px */
+  --font-size-sm: 0.875rem;   /* 14px */
+  --font-size-base: 1rem;     /* 16px */
+  --font-size-lg: 1.125rem;   /* 18px */
+  --font-size-xl: 1.25rem;    /* 20px */
+  --font-size-2xl: 1.5rem;    /* 24px */
+  --font-size-3xl: 1.875rem;  /* 30px */
+  --font-size-4xl: 2.25rem;   /* 36px */
+  --font-size-5xl: 3rem;      /* 48px */
+  --font-size-6xl: 3.75rem;   /* 60px */
+  
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-black: 900;
+  
+  --line-height-tight: 1.25;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.75;
+  
+  /* === Spacing === */
+  --spacing-xs: 0.25rem;   /* 4px */
+  --spacing-sm: 0.5rem;    /* 8px */
+  --spacing-md: 1rem;      /* 16px */
+  --spacing-lg: 1.5rem;    /* 24px */
+  --spacing-xl: 2rem;      /* 32px */
+  --spacing-2xl: 3rem;     /* 48px */
+  --spacing-3xl: 4rem;     /* 64px */
+  --spacing-4xl: 6rem;     /* 96px */
+  --spacing-5xl: 8rem;     /* 128px */
+  
+  /* === Layout === */
+  --max-width-sm: 640px;
+  --max-width-md: 768px;
+  --max-width-lg: 1024px;
+  --max-width-xl: 1280px;
+  --max-width-2xl: 1536px;
+  --max-width-container: 1200px;
+  
+  --section-padding-y: var(--spacing-5xl);
+  --section-padding-x: var(--spacing-xl);
+  
+  /* === Border Radius === */
+  --radius-sm: 0.25rem;    /* 4px */
+  --radius-md: 0.5rem;     /* 8px */
+  --radius-lg: 0.75rem;    /* 12px */
+  --radius-xl: 1rem;       /* 16px */
+  --radius-2xl: 1.5rem;    /* 24px */
+  --radius-full: 9999px;
+  
+  /* === Z-Index === */
+  --z-dropdown: 1000;
+  --z-sticky: 1020;
+  --z-fixed: 1030;
+  --z-modal-backdrop: 1040;
+  --z-modal: 1050;
+  --z-popover: 1060;
+  --z-tooltip: 1070;
+  --z-toast: 1080;
+  
+  /* === Transitions === */
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.3s ease;
+  --transition-slow: 0.5s ease;
+  --transition-bounce: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  --transition-smooth: 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+  
+  /* === Animation Durations === */
+  --duration-fast: 200ms;
+  --duration-normal: 300ms;
+  --duration-slow: 500ms;
+  --duration-slower: 800ms;
+  
+  /* === Breakpoints === */
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1536px;
+  
+  /* === Component Specific === */
+  --navbar-height: 70px;
+  --navbar-height-mobile: 60px;
+  
+  --card-padding: var(--spacing-xl);
+  --card-border-radius: var(--radius-xl);
+  
+  --button-height: 48px;
+  --button-height-sm: 40px;
+  --button-height-lg: 56px;
+  
+  --input-height: 48px;
+  --input-border-radius: var(--radius-lg);
+  
+  /* === Loading & States === */
+  --loading-color: var(--primary-color);
+  --success-color: #10b981;
+  --warning-color: #f59e0b;
+  --error-color: #ef4444;
+  --info-color: var(--secondary-color);
+  
+  /* === Particle System === */
+  --particle-color: rgba(0, 255, 136, 0.6);
+  --particle-size: 2px;
+  --particle-speed: 2s;
+  
+  /* === Dark Mode Overrides (if needed) === */
+  --mode-dark-bg: var(--bg-primary);
+  --mode-dark-text: var(--text-primary);
+  --mode-dark-border: var(--border-primary);
+}
+
+/* === Color Opacity Variations === */
+:root {
+  --primary-10: rgba(0, 255, 136, 0.1);
+  --primary-20: rgba(0, 255, 136, 0.2);
+  --primary-30: rgba(0, 255, 136, 0.3);
+  --primary-40: rgba(0, 255, 136, 0.4);
+  --primary-50: rgba(0, 255, 136, 0.5);
+  
+  --secondary-10: rgba(0, 102, 255, 0.1);
+  --secondary-20: rgba(0, 102, 255, 0.2);
+  --secondary-30: rgba(0, 102, 255, 0.3);
+  
+  --accent-10: rgba(255, 0, 102, 0.1);
+  --accent-20: rgba(255, 0, 102, 0.2);
+  --accent-30: rgba(255, 0, 102, 0.3);
+  
+  --black-10: rgba(0, 0, 0, 0.1);
+  --black-20: rgba(0, 0, 0, 0.2);
+  --black-30: rgba(0, 0, 0, 0.3);
+  --black-50: rgba(0, 0, 0, 0.5);
+  --black-70: rgba(0, 0, 0, 0.7);
+  
+  --white-10: rgba(255, 255, 255, 0.1);
+  --white-20: rgba(255, 255, 255, 0.2);
+  --white-30: rgba(255, 255, 255, 0.3);
+  --white-50: rgba(255, 255, 255, 0.5);
+  --white-70: rgba(255, 255, 255, 0.7);
+}
+
+/* === Utility Classes for Variables === */
+.text-primary { color: var(--text-primary); }
+.text-secondary { color: var(--text-secondary); }
+.text-accent { color: var(--primary-color); }
+
+.bg-primary { background-color: var(--bg-primary); }
+.bg-secondary { background-color: var(--bg-secondary); }
+.bg-card { background-color: var(--bg-card); }
+
+.border-primary { border-color: var(--border-primary); }
+.border-accent { border-color: var(--primary-color); }
+
+.gradient-primary { background: var(--gradient-primary); }
+.gradient-secondary { background: var(--gradient-secondary); }
+.gradient-text {
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.shadow-sm { box-shadow: var(--shadow-sm); }
+.shadow-md { box-shadow: var(--shadow-md); }
+.shadow-lg { box-shadow: var(--shadow-lg); }
+.shadow-glow { box-shadow: var(--shadow-glow); }
