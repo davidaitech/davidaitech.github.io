@@ -415,7 +415,7 @@
 
 .experience-timeline {
   position: relative;
-  padding-left: 5rem;
+  padding-left: 5rem; /* 수정: var(--spacing-xl)에서 5rem(80px)로 변경 */
 }
 
 .experience-timeline::before {
@@ -435,7 +435,7 @@
 
 .timeline-marker {
   position: absolute;
-  left: -8px;
+  left: -8px; /* 수정: -12px에서 -8px로 변경 */
   top: 4px;
   width: 16px;
   height: 16px;
@@ -957,136 +957,4 @@
   background: var(--primary-light);
   transform: translateY(-2px);
   box-shadow: var(--shadow-glow);
-}
-
-/* === Utility Components === */
-.tag {
-  display: inline-block;
-  padding: var(--spacing-xs) var(--spacing-sm);
-  background: var(--primary-10);
-  color: var(--primary-color);
-  border: 1px solid var(--primary-30);
-  border-radius: var(--radius-full);
-  font-size: var(--font-size-xs);
-  font-weight: var(--font-weight-medium);
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
-
-.badge {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 20px;
-  height: 20px;
-  padding: 0 var(--spacing-xs);
-  background: var(--primary-color);
-  color: var(--bg-primary);
-  border-radius: var(--radius-full);
-  font-size: var(--font-size-xs);
-  font-weight: var(--font-weight-semibold);
-}
-
-.divider {
-  width: 100%;
-  height: 1px;
-  background: var(--border-primary);
-  margin: var(--spacing-xl) 0;
-}
-
-.divider-vertical {
-  width: 1px;
-  height: 100%;
-  background: var(--border-primary);
-  margin: 0 var(--spacing-xl);
-}
-
-/* === Status States === */
-.success {
-  color: var(--success-color);
-}
-
-.warning {
-  color: var(--warning-color);
-}
-
-.error {
-  color: var(--error-color);
-}
-
-.info {
-  color: var(--info-color);
-}
-
-/* === Loading States === */
-.loading {
-  opacity: 0.6;
-  pointer-events: none;
-}
-
-.skeleton {
-  background: linear-gradient(90deg, var(--bg-tertiary) 25%, var(--bg-secondary) 50%, var(--bg-tertiary) 75%);
-  background-size: 200% 100%;
-  animation: skeleton-loading 1.5s infinite;
-}
-
-/* === Interactive States === */
-.interactive {
-  cursor: pointer;
-  transition: all var(--transition-normal);
-}
-
-.interactive:hover {
-  transform: translateY(-2px);
-}
-
-.interactive:active {
-  transform: translateY(0);
-}
-
-/* === Focus Management === */
-.focus-trap {
-  position: relative;
-}
-
-.focus-trap::before,
-.focus-trap::after {
-  content: '';
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  clip: rect(1px, 1px, 1px, 1px);
-}
-
-/* === Tooltip (Basic) === */
-.tooltip {
-  position: relative;
-  cursor: help;
-}
-
-.tooltip::after {
-  content: attr(data-tooltip);
-  position: absolute;
-  bottom: 100%;
-  left: 50%;
-  transform: translateX(-50%);
-  background: var(--bg-primary);
-  color: var(--text-primary);
-  padding: var(--spacing-xs) var(--spacing-sm);
-  border-radius: var(--radius-md);
-  font-size: var(--font-size-xs);
-  white-space: nowrap;
-  opacity: 0;
-  visibility: hidden;
-  transition: all var(--transition-normal);
-  z-index: var(--z-tooltip);
-  border: 1px solid var(--border-primary);
-  box-shadow: var(--shadow-lg);
-}
-
-.tooltip:hover::after {
-  opacity: 1;
-  visibility: visible;
-  transform: translateX(-50%) translateY(-4px);
 }
