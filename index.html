@@ -778,6 +778,22 @@
         }
 
         /* Responsive Design */
+        @media (max-width: 1200px) {
+            .skills-grid {
+                grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+                gap: 2rem;
+            }
+            
+            .skill-item {
+                padding: 3rem 2rem;
+                min-height: 200px;
+            }
+            
+            .skill-text {
+                font-size: 2.8rem;
+            }
+        }
+
         @media (max-width: 768px) {
             .nav-links {
                 display: none;
@@ -811,19 +827,20 @@
             .skills-grid {
                 grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
                 gap: 1.5rem;
+                padding: 2rem 0;
             }
             
             .skill-item {
-                padding: 2rem 1rem;
-                min-height: 150px;
+                padding: 2.5rem 1.5rem;
+                min-height: 160px;
             }
             
             .skill-text {
-                font-size: 2rem;
+                font-size: 2.2rem;
             }
             
             .skill-name {
-                font-size: 0.9rem;
+                font-size: 1rem;
             }
         }
     </style>
